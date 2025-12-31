@@ -32,12 +32,6 @@ class PipelineResponse(BaseModel):
 
 
 def is_dag(nodes: List[Dict], edges: List[Dict]) -> bool:
-    """
-    Check if the graph formed by nodes and edges is a Directed Acyclic Graph (DAG).
-    Uses Kahn's algorithm (topological sort with BFS) to detect cycles.
-    
-    Returns True if the graph is a DAG (no cycles), False otherwise.
-    """
     if not nodes:
         return True
     
